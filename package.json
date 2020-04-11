@@ -8,14 +8,17 @@
     "email": "gurkalenko.d@gmail.com"
   },
   "dependencies": {
+    "immutable": "^4.0.0-rc.12",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
     "react-scripts": "3.4.1",
     "redux": "^4.0.5",
+    "redux-immutable": "^4.0.0",
     "redux-logger": "^3.0.6",
     "redux-saga": "^1.1.3",
     "reselect": "^4.0.0",
+    "styled-components": "^5.1.0",
     "typescript": "^3.8.3"
   },
   "scripts": {
@@ -23,15 +26,23 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint:fix": "eslint './src/**/*.{ts,tsx}'",
+    "lint": "eslint . --ext .ts,.tsx,.js",
+    "lint:fix": "eslint . --ext .ts,.tsx,.js --fix",
+    "prettier": "prettier --write {src,cypress}/**/*.{js,ts,tsx}",
     "test:once": "npm test -- --watchAll=false",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "typecheck": "tsc",
-    "cov": "npm test -- --coverage"
+    "typecheck": "tsc --noEmit",
+    "cov": "npm test -- --coverage",
+    "cypress:run": "cypress run",
+    "cypress:run:chrome": "cypress run --browser chrome",
+    "cypress:run:chrome:headless": "cypress run --browser chrome --headless",
+    "cypress:open": "cypress open",
+    "cypress:run:percy": "percy exec -- cypress run --record",
+    "ci:start_server_and_percy": "percy exec -- yarn start"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test:once && npm run typecheck"
+      "pre-commit": "npm run test:once && npm run typecheck"
     }
   },
   "eslintConfig": {
@@ -55,15 +66,18 @@
     "@testing-library/user-event": "^7.2.1",
     "@types/enzyme": "^3.10.5",
     "@types/enzyme-adapter-react-16": "^1.0.6",
+    "@types/immutable": "^3.8.7",
     "@types/jest": "^24.9.1",
     "@types/node": "^12.12.35",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.6",
     "@types/react-redux": "^7.1.7",
     "@types/redux": "^3.6.0",
+    "@types/redux-immutable": "^4.0.1",
     "@types/redux-logger": "^3.0.7",
     "@types/redux-saga": "^0.10.5",
     "@types/reselect": "^2.2.0",
+    "@types/styled-components": "^5.0.1",
     "@typescript-eslint/eslint-plugin": "^2.27.0",
     "@typescript-eslint/parser": "^2.27.0",
     "enzyme": "^3.11.0",
