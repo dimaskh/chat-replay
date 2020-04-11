@@ -5,7 +5,7 @@ import initialState from './initialState'
 import rootReducer from './reducer'
 
 // Saga
-import rootSaga from './saga'
+import rootSaga from 'main/saga'
 
 // Utils
 import { applyMiddleware, createStore } from 'redux'

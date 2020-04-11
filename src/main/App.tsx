@@ -1,6 +1,9 @@
 // Libs
 import React from 'react'
 
+// Components
+import UsersList from 'modules/users/components/UsersList'
+
 // Styles
 import 'styles/App.css'
 
@@ -10,6 +13,7 @@ function App() {
       <header className="App-header">
         <p>Chat Replay Application</p>
       </header>
+      <UsersList />
     </div>
   )
 }
