@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`modules/main/App component should render correctly 1`] = `
+exports[`main/App component should render correctly 1`] = `
 <div
   className="App"
 >
@@ -11,5 +11,6 @@ exports[`modules/main/App component should render correctly 1`] = `
       Chat Replay Application
     </p>
   </header>
+  <UsersList />
 </div>
 `;
