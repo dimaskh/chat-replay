@@ -1,16 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`main/App component should render correctly 1`] = `
-<div
-  className="App"
->
-  <header
-    className="App-header"
-  >
-    <p>
-      Chat Replay Application
-    </p>
-  </header>
-  <UsersList />
-</div>
+<styled.div>
+  <Header />
+  <Content />
+</styled.div>
 `;

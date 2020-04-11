@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 
 // Components
 import ErrorBoundary from 'components/ErrorBoundary'
-import App from 'main/App'
+import App from 'main/components/App'
 import { Provider } from 'react-redux'
 
 // Styles
