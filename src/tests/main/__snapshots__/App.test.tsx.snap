@@ -2,7 +2,9 @@
 
 exports[`main/App component should render correctly 1`] = `
 <styled.div>
-  <Header />
+  <Header>
+    Chat Replay Application
+  </Header>
   <Content />
 </styled.div>
 `;

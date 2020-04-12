@@ -1,8 +1,11 @@
 // Effects
-import { call, delay } from 'redux-saga/effects'
+import { call, delay, put } from 'redux-saga/effects'
 
 // Sagas
 import processEvent from './processEvent'
+
+// Actions
+import { finishRecord } from '../actions'
 
 // Getters
 import { getDelta } from 'models/events/getters'
@@ -25,5 +28,5 @@ export default function* scheduleEvents(events: Event[]) {
     counter++
   }
 
-  console.log('FINISHED PROCESSING EVENTS')
+  yield put(finishRecord())
 }

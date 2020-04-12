@@ -2,6 +2,7 @@
 import React from 'react'
 
 // Components
+import Header from 'components/Header'
 import UserItem from './UserItem'
 
 // Styles
@@ -20,7 +21,12 @@ export class UsersList extends React.PureComponent<Props> {
   }
 
   public render() {
-    return <StyledUsersList>{this.renderContent()}</StyledUsersList>
+    return (
+      <StyledUsersList>
+        <Header medium>Users</Header>
+        {this.renderContent()}
+      </StyledUsersList>
+    )
   }
 
   private renderContent = (): JSX.Element[] => {
@@ -35,7 +41,7 @@ export const StyledUsersList = styled.div`
   flex-direction: column;
   width: 25vw;
   height: 100%;
-  border: 1px solid black;
+  border-right: 1px solid #616161;
   color: white;
 `
 

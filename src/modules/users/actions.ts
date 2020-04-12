@@ -1,5 +1,5 @@
 // Constants
-import { RECEIVE_USERS, REMOVE_USER, UPDATE_USER } from './constants'
+import { CLEAR_USERS, RECEIVE_USERS, REMOVE_USER, UPDATE_USER } from './constants'
 
 // Types
 import { User } from 'models/users/types'
@@ -17,4 +17,8 @@ export const removeUser = (id: number) => ({
 export const updateUser = (user: User) => ({
   type: UPDATE_USER,
   payload: user,
+})
+
+export const clearUsers = () => ({
+  type: CLEAR_USERS,
 })

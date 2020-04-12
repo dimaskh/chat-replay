@@ -13,6 +13,5 @@ export default function formatMessage(message: Message): Object {
     type: 'text',
     position: 'left',
     title: getAuthor(message, ''),
-    // avatar: getAvatarUrl(),
   }
 }

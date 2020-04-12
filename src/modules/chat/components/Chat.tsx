@@ -2,6 +2,7 @@
 import React from 'react'
 
 // Components
+import Header from 'components/Header'
 import { MessageList } from 'react-chat-elements'
 
 // Styles
@@ -10,24 +11,25 @@ import styled from 'styled-components'
 export class Chat extends React.PureComponent<any> {
   public render() {
     return (
-      <div>
-        {'Chat'}
+      <StyledChat>
+        <Header medium>Chat Replay</Header>
         {this.renderContent()}
-      </div>
+      </StyledChat>
     )
   }
 
   private renderContent = (): JSX.Element => {
     const { messages } = this.props
 
-    return <MessageList className="message-list" lockable={true} toBottomHeight={'100%'} dataSource={messages} />
+    return <MessageList className="message-list" dataSource={messages} />
   }
 }
 
 export const StyledChat = styled.div`
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 55vw;
   height: 100%;
-  border: 1px solid black;
   color: white;
 `
 

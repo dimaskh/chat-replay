@@ -9,7 +9,7 @@ import { receiveUsers } from '../actions'
 
 // Utils
 import { getPayload } from 'models/events/getters'
-import normalizeUser from 'modules/users/utils/normalizeUser'
+import formatUser from 'modules/users/utils/formatUser'
 
 // Types
 import { Event } from 'models/events/types'
@@ -22,13 +22,17 @@ export default function* initializeUsers(events: Event[]) {
 }
 
 export function getInitialUsers(events: Event[]): User[] {
-  const result = [...events].reduce((acc: User[], event: Event, index: number, initial: Event[]): User[] => {
-    const nextEvent = initial[index + 1]
-    const nextPayload = getPayload(nextEvent, {})
-    const payload = getPayload(event, {})
-    if (nextPayload.type !== PAYLOAD_TYPE_MESSAGE) initial.splice(index)
-    return [...acc, normalizeUser(payload.user)]
-  }, [])
+  let users = [] as any[]
 
-  return result
+  for (const event of events) {
+    const payload = getPayload(event, {})
+
+    if (payload.type === PAYLOAD_TYPE_MESSAGE) {
+      users = [...users, formatUser(payload.user)]
+    } else {
+      break
+    }
+  }
+
+  return users
 }

@@ -1,5 +1,5 @@
 // Constants
-import { RECEIVE_MESSAGE, REMOVE_MESSAGE, UPDATE_MESSAGE } from './constants'
+import { CLEAR_MESSAGES, RECEIVE_MESSAGE, REMOVE_MESSAGE, UPDATE_MESSAGE } from './constants'
 
 // Types
 import { Message } from 'models/messages/types'
@@ -17,4 +17,8 @@ export const removeMessage = (id: number) => ({
 export const updateMessage = (message: Message) => ({
   type: UPDATE_MESSAGE,
   payload: message,
+})
+
+export const clearMessages = () => ({
+  type: CLEAR_MESSAGES,
 })

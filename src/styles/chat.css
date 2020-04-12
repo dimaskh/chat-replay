@@ -1,0 +1,19 @@
+.rce-citem-body--top-title,
+.rce-mbox-text {
+  color: black;
+}
+
+.rce-citem {
+  background: #cccccc;
+}
+
+.rce-popup-wrapper {
+  background: rgba(100, 100, 100, 0.7);
+}
+
+.rce-popup-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}

@@ -1,6 +1,6 @@
 // Constants
 import { PROP_ID } from 'models/messages/constants'
-import { RECEIVE_MESSAGE, REMOVE_MESSAGE, UPDATE_MESSAGE } from './constants'
+import { CLEAR_MESSAGES, RECEIVE_MESSAGE, REMOVE_MESSAGE, UPDATE_MESSAGE } from './constants'
 
 // Utils
 import createReducer from 'utils/createReducer'
@@ -31,7 +31,10 @@ export const updateMessage = (state: ChatState, action: AnyAction): ChatState =>
 
   const newData = state.data.map((message: Message) => {
     if (message[PROP_ID] === updatedMessage[PROP_ID]) {
-      return updatedMessage
+      return {
+        ...message,
+        ...updatedMessage,
+      }
     }
 
     return message
@@ -54,8 +57,11 @@ export const removeMessage = (state: ChatState, action: AnyAction): ChatState =>
   }
 }
 
+export const clearMessages = (state: ChatState, action: AnyAction): ChatState => initialState
+
 export default createReducer(initialState, {
   [RECEIVE_MESSAGE]: receiveMessage,
   [REMOVE_MESSAGE]: removeMessage,
   [UPDATE_MESSAGE]: updateMessage,
+  [CLEAR_MESSAGES]: clearMessages,
 })

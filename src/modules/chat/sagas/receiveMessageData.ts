@@ -32,7 +32,7 @@ export default function* receiveMessageData(event: Event) {
 
   const handlerActions = {
     [PAYLOAD_TYPE_MESSAGE]: put(receiveMessage(formattedMessage)),
-    [PAYLOAD_TYPE_UPDATE]: put(updateMessage(formattedMessage)),
+    [PAYLOAD_TYPE_UPDATE]: put(updateMessage(message)),
     [PAYLOAD_TYPE_DELETE]: put(removeMessage(message.id)),
   } as Record<string, any>
 

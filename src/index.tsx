@@ -9,6 +9,7 @@ import { Provider } from 'react-redux'
 
 // Styles
 import 'react-chat-elements/dist/main.css'
+import 'styles/chat.css'
 import 'styles/normalize.css'
 
 // Utils

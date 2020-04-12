@@ -1,6 +1,6 @@
 // Constants
 import { PROP_ID } from 'models/users/constants'
-import { RECEIVE_USERS, REMOVE_USER, UPDATE_USER } from './constants'
+import { CLEAR_USERS, RECEIVE_USERS, REMOVE_USER, UPDATE_USER } from './constants'
 
 // Utils
 import createReducer from 'utils/createReducer'
@@ -54,8 +54,11 @@ export const removeUser = (state: UsersState, action: AnyAction): UsersState => 
   }
 }
 
+export const clearUsers = (state: UsersState, action: AnyAction): UsersState => initialState
+
 export default createReducer(initialState, {
   [RECEIVE_USERS]: receiveUsers,
   [REMOVE_USER]: removeUser,
   [UPDATE_USER]: updateUser,
+  [CLEAR_USERS]: clearUsers,
 })
