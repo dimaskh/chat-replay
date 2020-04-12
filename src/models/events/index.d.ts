@@ -15,7 +15,7 @@ export declare const MODEL: 'Event'
 // Entity
 export type Event = {
   [PROP_DELTA]: number
-  [PROP_PAYLOAD]: Record
+  [PROP_PAYLOAD]: Object
 }
 
 // Getters

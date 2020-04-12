@@ -8,7 +8,7 @@ export declare const PROP_DISPLAY_NAME: 'display_name'
 export declare const MODEL: 'User'
 
 // Entity
-export type Message = {
+export type User = {
   [PROP_ID]: number
   [PROP_USER_NAME]?: string
   [PROP_USERNAME]?: string

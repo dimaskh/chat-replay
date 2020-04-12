@@ -3,7 +3,7 @@ import React from 'react'
 
 // Components
 import Chat from 'modules/chat/components/Chat'
-import Player from 'modules/player/components/Player'
+import Player from 'modules/player/containers/Player'
 import UsersList from 'modules/users/components/UsersList'
 
 // Styles

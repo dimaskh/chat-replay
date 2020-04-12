@@ -32,6 +32,7 @@
     "test:once": "npm test -- --watchAll=false",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "typecheck": "tsc --noEmit",
+    "check:modules": "tsc --traceResolution",
     "cov": "npm test -- --coverage",
     "cypress:run": "cypress run",
     "cypress:run:chrome": "cypress run --browser chrome",

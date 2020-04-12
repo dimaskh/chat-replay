@@ -7,7 +7,11 @@ import Button from 'components/Button'
 // Styles
 import styled from 'styled-components'
 
-export class Player extends React.PureComponent<any> {
+type Props = {
+  replayRecord: () => { type: string }
+}
+
+export class Player extends React.PureComponent<Props> {
   public render() {
     return (
       <StyledPlayer>
@@ -18,7 +22,9 @@ export class Player extends React.PureComponent<any> {
   }
 
   private startDefaultReplay = () => {
-    // TODO: Provide start replay logic
+    const { replayRecord } = this.props
+
+    replayRecord()
   }
 }
 

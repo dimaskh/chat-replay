@@ -1,10 +1,13 @@
 // Effects
-import { call, takeLatest } from 'redux-saga/effects'
+import { call, put, takeLatest } from 'redux-saga/effects'
 
 // Sagas
+import initializeUsers from 'modules/users/sagas/initializeUsers'
 import fetchRecord from './fetchRecord'
+import scheduleEvents from './scheduleEvents'
 
 // Actions
+import { receiveRecord } from '../actions'
 
 // Constants
 import { REPLAY_RECORD } from '../constants'
@@ -20,5 +23,8 @@ export function* handleReplayRecord(action: AnyAction) {
   const { payload: url } = action
 
   const data = yield call(fetchRecord, url)
-  console.log('DATA: ', data)
+
+  yield put(receiveRecord(data))
+  yield call(initializeUsers, data)
+  yield call(scheduleEvents, data)
 }

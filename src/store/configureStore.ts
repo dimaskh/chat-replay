@@ -1,6 +1,3 @@
-// Initial State
-import initialState from './initialState'
-
 // Reducer
 import rootReducer from './reducer'
 
@@ -23,11 +20,7 @@ const getAppliedMiddleware = () => {
 }
 
 const configureStore = () => {
-  const store = createStore(
-    rootReducer,
-    initialState,
-    composeWithDevTools(getAppliedMiddleware())
-  )
+  const store = createStore(rootReducer, composeWithDevTools(getAppliedMiddleware()))
   sagaMiddleware.run(rootSaga)
   return store
 }
