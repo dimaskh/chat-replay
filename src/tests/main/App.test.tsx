@@ -4,7 +4,7 @@ import { shallow } from 'enzyme'
 import { shallowToJson } from 'enzyme-to-json'
 
 // Tested component
-import App from 'main/components/App'
+import App from 'modules/main/components/App'
 
 describe('main/App component', () => {
   it('should render correctly', () => {

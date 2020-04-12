@@ -1,12 +1,26 @@
 // Libs
 import React from 'react'
 
+// Components
+import { MessageList } from 'react-chat-elements'
+
 // Styles
 import styled from 'styled-components'
 
 export class Chat extends React.PureComponent<any> {
   public render() {
-    return <StyledChat>Chat</StyledChat>
+    return (
+      <div>
+        {'Chat'}
+        {this.renderContent()}
+      </div>
+    )
+  }
+
+  private renderContent = (): JSX.Element => {
+    const { messages } = this.props
+
+    return <MessageList className="message-list" lockable={true} toBottomHeight={'100%'} dataSource={messages} />
   }
 }
 

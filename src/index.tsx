@@ -4,10 +4,11 @@ import ReactDOM from 'react-dom'
 
 // Components
 import ErrorBoundary from 'components/ErrorBoundary'
-import App from 'main/components/App'
+import App from 'modules/main/components/App'
 import { Provider } from 'react-redux'
 
 // Styles
+import 'react-chat-elements/dist/main.css'
 import 'styles/normalize.css'
 
 // Utils

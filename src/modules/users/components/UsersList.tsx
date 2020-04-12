@@ -1,12 +1,32 @@
 // Libs
 import React from 'react'
 
+// Components
+import UserItem from './UserItem'
+
 // Styles
 import styled from 'styled-components'
 
-export class UsersList extends React.PureComponent<any> {
+// Types
+import { User } from 'models/users/types'
+
+type Props = {
+  users: User[]
+}
+
+export class UsersList extends React.PureComponent<Props> {
+  public static defaultProps = {
+    users: [],
+  }
+
   public render() {
-    return <StyledUsersList>Users List</StyledUsersList>
+    return <StyledUsersList>{this.renderContent()}</StyledUsersList>
+  }
+
+  private renderContent = (): JSX.Element[] => {
+    const { users } = this.props
+
+    return users.map((user: User) => <UserItem key={user.id} user={user} />)
   }
 }
 

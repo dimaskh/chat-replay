@@ -17,7 +17,6 @@ import { User } from 'models/users/types'
 
 export default function* initializeUsers(events: Event[]) {
   const initialUsers = getInitialUsers(events)
-  console.log('initialUsers: ', initialUsers)
 
   yield put(receiveUsers(initialUsers))
 }

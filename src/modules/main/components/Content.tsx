@@ -2,9 +2,9 @@
 import React from 'react'
 
 // Components
-import Chat from 'modules/chat/components/Chat'
+import Chat from 'modules/chat/containers/Chat'
 import Player from 'modules/player/containers/Player'
-import UsersList from 'modules/users/components/UsersList'
+import UsersList from 'modules/users/containers/Users'
 
 // Styles
 import styled from 'styled-components'
