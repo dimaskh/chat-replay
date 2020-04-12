@@ -13,7 +13,7 @@ export const formattedMessages$: Selector<StoreState, Object[]> = createSelector
   messages$,
   (messages: Message[] = []): Object[] => {
     const result = messages.map(formatMessage)
-    console.log('formattedMessages$ Result: ', result)
+
     return result
   }
 )

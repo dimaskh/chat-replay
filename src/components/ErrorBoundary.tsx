@@ -1,27 +1,26 @@
 // Libs
-import React, { Component } from 'react'
+import React from 'react'
 
 // Styles
 import styled from 'styled-components'
 
-/**
- * This file showing "TypeScirpt can use with JavaScript" for beginners
- */
-export default class ErrorBoundary extends Component {
-  state = {
+export default class ErrorBoundary extends React.PureComponent {
+  public state = {
     error: null,
     info: null,
   }
 
-  componentDidCatch(error: any, info: any) {
+  public componentDidCatch(error: any, info: any) {
     this.setState({ error, info })
   }
 
-  render() {
+  public render() {
     const { error } = this.state
+
     if (error) {
       return <ErrorBoundaryFallbackComponent />
     }
+
     return this.props.children
   }
 }
@@ -45,7 +44,7 @@ const Message = styled.div`
 const ErrorBoundaryFallbackComponent = () => (
   <Container>
     <Message>
-      Something Error Ooccurring
+      Some Error Occurred
       <span role="img" aria-label="face-emoji">
         😞
       </span>

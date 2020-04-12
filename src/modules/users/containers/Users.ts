@@ -1,6 +1,5 @@
 // Redux
 import { connect } from 'react-redux'
-import { bindActionCreators, Dispatch } from 'redux'
 
 // Component
 import UsersList from '../components/UsersList'
@@ -15,13 +14,4 @@ const mapStateToProps = (state: StoreState) => ({
   users: users$(state),
 })
 
-const mapDispatchToProps = (dispatch: Dispatch) => {
-  return bindActionCreators(
-    {
-      // TODO: Add actions for users container
-    },
-    dispatch
-  )
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(UsersList as React.ComponentType<any>)
+export default connect(mapStateToProps)(UsersList as React.ComponentType<any>)
