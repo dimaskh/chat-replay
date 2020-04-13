@@ -18,6 +18,7 @@ export default class ErrorBoundary extends React.PureComponent {
     const { error } = this.state
 
     if (error) {
+      console.log(error)
       return <ErrorBoundaryFallbackComponent />
     }
 

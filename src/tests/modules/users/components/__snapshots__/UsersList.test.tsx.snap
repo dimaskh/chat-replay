@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`users/UsersList component should render correctly 1`] = `
+<styled.div>
+  <Header
+    medium={true}
+  >
+    Users
+  </Header>
+  <UserItem
+    key="1"
+    user={
+      Object {
+        "display_name": "Taco Spolsky",
+        "id": 1,
+        "user_name": "taco",
+      }
+    }
+  />
+</styled.div>
+`;

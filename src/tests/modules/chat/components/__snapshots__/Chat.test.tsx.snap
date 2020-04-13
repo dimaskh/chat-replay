@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Chat should render correctly 1`] = `
+<styled.div>
+  <Header
+    medium={true}
+  >
+    Chat Replay
+  </Header>
+  <t
+    className="message-list"
+    dataSource={
+      Array [
+        Object {
+          "id": 1,
+          "text": "Message 1",
+        },
+        Object {
+          "id": 2,
+          "text": "Message 2",
+        },
+      ]
+    }
+    downButton={true}
+    downButtonBadge={null}
+    lockable={false}
+    onClick={null}
+    onDownButtonClick={null}
+    onDownload={null}
+    onForwardClick={null}
+    onOpen={null}
+    onPhotoError={null}
+    onTitleClick={null}
+    toBottomHeight={300}
+  />
+</styled.div>
+`;

@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Player should render correctly 1`] = `
+<styled.div>
+  <Header
+    medium={true}
+  >
+    Player
+  </Header>
+  <styled.div>
+    <t
+      backgroundColor="#3979aa"
+      buttonRef={null}
+      className={null}
+      color="white"
+      disabled={false}
+      icon={null}
+      onClick={[Function]}
+      text="Replay Default Record"
+      title={null}
+      type={null}
+    />
+  </styled.div>
+  <t
+    color="#333"
+    footerButtons={
+      Array [
+        Object {
+          "color": "black",
+          "onClick": [Function],
+          "text": "OK",
+        },
+      ]
+    }
+    header={null}
+    headerButtons={Array []}
+    renderContent={null}
+    renderFooter={null}
+    renderHeader={null}
+    show={false}
+    text="Replay is finished"
+  />
+</styled.div>
+`;
+
+exports[`components/Player should render popup if isFinished true 1`] = `
+<styled.div>
+  <Header
+    medium={true}
+  >
+    Player
+  </Header>
+  <styled.div>
+    <t
+      backgroundColor="#3979aa"
+      buttonRef={null}
+      className={null}
+      color="white"
+      disabled={false}
+      icon={null}
+      onClick={[Function]}
+      text="Replay Default Record"
+      title={null}
+      type={null}
+    />
+  </styled.div>
+  <t
+    color="#333"
+    footerButtons={
+      Array [
+        Object {
+          "color": "black",
+          "onClick": [Function],
+          "text": "OK",
+        },
+      ]
+    }
+    header={null}
+    headerButtons={Array []}
+    renderContent={null}
+    renderFooter={null}
+    renderHeader={null}
+    show={true}
+    text="Replay is finished"
+  />
+</styled.div>
+`;

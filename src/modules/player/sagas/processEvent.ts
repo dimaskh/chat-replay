@@ -9,7 +9,7 @@ import receiveUserData from 'modules/users/sagas/receiveUserData'
 import { Event } from 'models/events/types'
 
 export default function* processEvent(event: Event) {
-  const sagas = [call(receiveUserData, event), call(receiveMessageData, event)]
+  const calls = [call(receiveUserData, event), call(receiveMessageData, event)]
 
-  yield all(sagas)
+  yield all(calls)
 }
