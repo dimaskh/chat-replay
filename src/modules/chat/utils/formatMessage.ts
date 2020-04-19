@@ -1,6 +1,3 @@
-// Utils
-// import getAvatarUrl from 'modules/users/utils/getAvatarUrl'
-
 // Getters
 import { getAuthor } from 'models/messages/getters'
 
