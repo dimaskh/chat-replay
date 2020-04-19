@@ -18,7 +18,7 @@ describe('modules/chat/actions', () => {
     expect(actions.removeMessage(1)).toEqual(expected)
   })
 
-  it('should handle.updateUser action', () => {
+  it('should handle updateUser action', () => {
     const expected = { type: UPDATE_MESSAGE, payload: message }
     expect(actions.updateMessage(message)).toEqual(expected)
   })

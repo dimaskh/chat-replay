@@ -6,9 +6,14 @@ import { shallowToJson } from 'enzyme-to-json'
 // Tested components
 import Player from 'modules/player/components/Player'
 
+// Types
+import { Props } from 'modules/player/components/Player'
+import { ShallowWrapper } from 'enzyme'
+
 describe('components/Player', () => {
-  let component: any
-  let props: any
+  let component: ShallowWrapper<Props, {}, Player>
+  let props: Props
+  let instance: any
 
   beforeEach(() => {
     props = {
@@ -19,6 +24,7 @@ describe('components/Player', () => {
     }
 
     component = shallow(<Player {...props} />)
+    instance = component.instance()
   })
 
   it('should render correctly', () => {
@@ -32,14 +38,21 @@ describe('components/Player', () => {
   })
 
   it('should handle startDefaultReplay', () => {
-    component.instance().startDefaultReplay()
+    instance.startDefaultReplay()
 
     expect(props.replayRecord).toHaveBeenCalled()
   })
 
   it('should handle startDefaultReplay if isPlaying true', () => {
     component.setProps({ isPlaying: true })
+    instance.startDefaultReplay()
 
     expect(props.replayRecord).not.toHaveBeenCalled()
+  })
+
+  it('should compose popup buttons', () => {
+    const buttons = instance.getPopupButtons()
+    buttons[0].onClick()
+    expect(props.clearData).toHaveBeenCalled()
   })
 })

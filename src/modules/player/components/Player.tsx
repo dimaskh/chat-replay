@@ -8,7 +8,7 @@ import { Button, Popup } from 'react-chat-elements'
 // Styles
 import styled from 'styled-components'
 
-type Props = {
+export type Props = {
   isFinished: boolean
   isPlaying: boolean
   clearData: () => { type: string }
