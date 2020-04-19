@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`users/UserItem component should render correctly 1`] = `
+<t
+  alt=""
+  avatar="https://www.gravatar.com/avatar/cd00f46ea75c8593fd2a58ae9ed62424?s=32&d=identicon&r=PG"
+  avatarFlexible={false}
+  date="2020-04-19T00:00:01.30Z"
+  dateString={null}
+  id=""
+  onAvatarError={[Function]}
+  onClick={null}
+  statusColor={null}
+  statusColorType="badge"
+  statusText={null}
+  subtitle="Online"
+  title="Taco Spolsky"
+  unread={0}
+/>
+`;

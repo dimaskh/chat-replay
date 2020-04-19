@@ -32,12 +32,19 @@
     "test:once": "npm test -- --watchAll=false",
     "typecheck": "tsc --noEmit",
     "check:modules": "tsc --traceResolution",
-    "cov": "npm test -- --coverage"
+    "cov": "npm run test:once -- --coverage"
   },
   "husky": {
     "hooks": {
       "pre-commit": "npm run test:once && npm run typecheck"
     }
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/src/utils/serviceWorker",
+      "<rootDir>/src/store/",
+      "containers/"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"

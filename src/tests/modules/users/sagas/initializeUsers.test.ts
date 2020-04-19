@@ -9,10 +9,11 @@ import initializeUsers from 'modules/users/sagas/initializeUsers'
 
 // Mocks
 import { events } from 'tests/mocks/events'
+import { user } from 'tests/mocks/users'
 
 describe('users/sagas/initializeUsers', () => {
   const saga = initializeUsers(events)
-  const expectedInitialUsers = [{ id: 1, user_name: 'taco', display_name: 'Taco Spolsky' }]
+  const expectedInitialUsers = [user]
 
   it('should calculate initial users and put receiveUsers', () => {
     expect(saga.next().value).toEqual(put(receiveUsers(expectedInitialUsers)))
