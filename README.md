@@ -1,3 +1,8 @@
+## Update 19.04.2020:
+
+- Provided code splitting. Now application is bundled into several chunks after running `npm run build`
+- Provided almost ~100% unit tests coverage.
+
 ## Update 17.04.2020:
 
 Pushed explicit commit history to the repo. I was told that absence of commit history is one of reasons of declining my work - so I decided to add it. Initial task description didn't say that commit history is mandatory - so I preferred to hide my development process and squash history into one commit.
@@ -7,12 +12,9 @@ If there are also some other reasons for declining my work - could you please gi
 I thought about some additional features to this task which could be also implemented:
 
 - Node.js server with some DB connected
-- Code splitting
 - Better chat components, parsing emoji etc
 - Better styles
-- Better/stronger Typescript
 - Internationalization
-- 100% unit tests coverage (there are some unit tests in `tests` folder for components and sagas but coverage is not 100%)
 - E2E tests
 
 Unfortunately, there are some time constraints that I have - due to my current project, so I didn't have enough time to add these features. But if something from the list is desirable - I could easily implement it on my weekend.
