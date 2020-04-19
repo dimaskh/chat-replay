@@ -1,13 +1,13 @@
 // Libs
 import React from 'react'
 
-// Components
-import Chat from 'modules/chat/containers/Chat'
-import Player from 'modules/player/containers/Player'
-import UsersList from 'modules/users/containers/Users'
-
 // Styles
 import styled from 'styled-components'
+
+// Components
+const Chat = React.lazy(() => import('modules/chat/containers/Chat'))
+const Player = React.lazy(() => import('modules/player/containers/Player'))
+const UsersList = React.lazy(() => import('modules/users/containers/Users'))
 
 export const Content: React.FC = () => (
   <StyledContent>

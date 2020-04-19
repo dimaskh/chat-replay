@@ -2,8 +2,8 @@
 
 exports[`main/Content component should render correctly 1`] = `
 <styled.div>
-  <Connect(Player) />
-  <Connect(UsersList) />
-  <Connect(Chat) />
+  <lazy />
+  <lazy />
+  <lazy />
 </styled.div>
 `;

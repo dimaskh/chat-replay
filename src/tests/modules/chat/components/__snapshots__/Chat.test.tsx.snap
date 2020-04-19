@@ -7,7 +7,7 @@ exports[`components/Chat should render correctly 1`] = `
   >
     Chat Replay
   </Header>
-  <t
+  <lazy
     className="message-list"
     dataSource={
       Array [
@@ -21,17 +21,6 @@ exports[`components/Chat should render correctly 1`] = `
         },
       ]
     }
-    downButton={true}
-    downButtonBadge={null}
-    lockable={false}
-    onClick={null}
-    onDownButtonClick={null}
-    onDownload={null}
-    onForwardClick={null}
-    onOpen={null}
-    onPhotoError={null}
-    onTitleClick={null}
-    toBottomHeight={300}
   />
 </styled.div>
 `;

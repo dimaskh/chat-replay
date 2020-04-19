@@ -3,10 +3,11 @@ import React from 'react'
 
 // Components
 import Header from 'components/Header'
-import { MessageList } from 'react-chat-elements'
 
 // Styles
 import styled from 'styled-components'
+
+const MessageList = React.lazy(() => import('./MessageList'))
 
 export class Chat extends React.PureComponent<any> {
   public render() {

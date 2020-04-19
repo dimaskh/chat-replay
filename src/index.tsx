@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom'
 
 // Components
 import ErrorBoundary from 'components/ErrorBoundary'
+import Loader from 'components/Loader'
 import App from 'modules/main/components/App'
 import { Provider } from 'react-redux'
 
@@ -21,9 +22,11 @@ const store = configureStore()
 ReactDOM.render(
   <React.StrictMode>
     <ErrorBoundary>
-      <Provider store={store}>
-        <App />
-      </Provider>
+      <React.Suspense fallback={<Loader />}>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </React.Suspense>
     </ErrorBoundary>
   </React.StrictMode>,
   document.getElementById('root')
