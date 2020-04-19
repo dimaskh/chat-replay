@@ -1,9 +1,10 @@
 // Libs
 import React from 'react'
 import { shallow } from 'enzyme'
+import { shallowToJson } from 'enzyme-to-json'
 
 // Tested components
-import ErrorBoundary from 'components/ErrorBoundary'
+import ErrorBoundary, { ErrorBoundaryFallbackComponent } from 'components/ErrorBoundary'
 
 describe('When no errors are caught in a child component', () => {
   let ErrorBoundaryComponent: any
@@ -45,5 +46,13 @@ describe('When error is caught in a child component', () => {
 
   it('should not render the child component', () => {
     expect(ErrorBoundaryComponent.find('h1').exists()).toBeFalsy()
+  })
+
+  describe('ErrorBoundaryFallbackComponent component', () => {
+    it('should render correctly', () => {
+      const component = shallow(<ErrorBoundaryFallbackComponent />)
+
+      expect(shallowToJson(component)).toMatchSnapshot()
+    })
   })
 })

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`When error is caught in a child component ErrorBoundaryFallbackComponent component should render correctly 1`] = `
+<styled.div>
+  <styled.div>
+    Some Error Occurred
+    <span
+      aria-label="face-emoji"
+      role="img"
+    >
+      😞
+    </span>
+  </styled.div>
+</styled.div>
+`;

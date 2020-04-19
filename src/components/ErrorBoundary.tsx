@@ -42,7 +42,7 @@ const Message = styled.div`
   color: #78909c;
 `
 
-const ErrorBoundaryFallbackComponent = () => (
+export const ErrorBoundaryFallbackComponent = () => (
   <Container>
     <Message>
       Some Error Occurred

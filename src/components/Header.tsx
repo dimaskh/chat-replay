@@ -4,17 +4,17 @@ import React from 'react'
 // Utils
 import styled from 'styled-components'
 
-type Props = {
+export type Props = {
   children: string
   medium?: boolean
   small?: boolean
 }
 
-export const Header: React.FC<Props> = ({ children = '', ...props }: Props) => (
+export const Header: React.FC<Props> = ({ children, ...props }: Props) => (
   <StyledHeader {...props}>{children}</StyledHeader>
 )
 
-const StyledHeader = styled.header`
+export const StyledHeader = styled.header`
   background-color: #282c34;
   height: ${(props: Props) => {
     if (props.medium) return '60px'

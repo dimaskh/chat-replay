@@ -1,23 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/Header should render correctly 1`] = `
+exports[`components/Header should render Header correctly 1`] = `
 <styled.header>
-  Text
+  Title
 </styled.header>
 `;
 
-exports[`components/Header should render correctly with medium prop 1`] = `
-<styled.header
-  medium={true}
+exports[`components/Header should render StyledHeader correctly 1`] = `
+<header
+  className="sc-AxjAm iMRwGC"
 >
-  Text
-</styled.header>
+  Title
+</header>
 `;
 
-exports[`components/Header should render correctly with small prop 1`] = `
-<styled.header
-  small={true}
+exports[`components/Header should render StyledHeader correctly with medium prop 1`] = `
+<header
+  className="sc-AxjAm hVedNm"
 >
-  Text
-</styled.header>
+  Title
+</header>
+`;
+
+exports[`components/Header should render StyledHeader correctly with small prop 1`] = `
+<header
+  className="sc-AxjAm iPBSjx"
+>
+  Title
+</header>
 `;

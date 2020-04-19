@@ -43,7 +43,10 @@
     "coveragePathIgnorePatterns": [
       "<rootDir>/src/utils/serviceWorker",
       "<rootDir>/src/store/",
-      "containers/"
+      "<rootDir>/src/models/",
+      "<rootDir>/src/index",
+      "containers/",
+      "mocks/"
     ]
   },
   "eslintConfig": {
